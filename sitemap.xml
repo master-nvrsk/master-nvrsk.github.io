@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pages.dev</loc>
+    <loc>https://ваш-домен.ru/index.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://pages.devnovorossiysk.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pages.devanapa.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pages.devgelendzhik.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pages.devbusiness.html</loc>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://ваш-домен.ru/novorossiysk.html</loc> ... priority 0.9</url>
+  <url><loc>https://ваш-домен.ru/anapa.html</loc> ... priority 0.9</url>
+  <url><loc>https://ваш-домен.ru/gelendzhik.html</loc> ... priority 0.9</url>
+  <url><loc>https://ваш-домен.ru/business.html</loc> ... priority 0.8</url>
 </urlset>
