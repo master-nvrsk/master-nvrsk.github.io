@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Exploded view: washing machine drum, heating element, control board">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0" stop-color="#151920"/>
+      <stop offset="1" stop-color="#0B0D10"/>
+    </radialGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d2dc"/>
+      <stop offset=".5" stop-color="#9aa6b6"/>
+      <stop offset="1" stop-color="#6b7a8a"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e08a4a"/>
+      <stop offset=".5" stop-color="#c2692f"/>
+      <stop offset="1" stop-color="#8a4a1f"/>
+    </linearGradient>
+    <linearGradient id="pcb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f3a2a"/>
+      <stop offset="1" stop-color="#0f2418"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="rim" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- subtle grid -->
+  <g stroke="#1a2028" stroke-width=".5" opacity=".35">
+    <path d="M0 300 H800 M400 0 V600"/>
+    <path d="M0 150 H800 M0 450 H800 M200 0 V600 M600 0 V600" opacity=".15"/>
+  </g>
+
+  <!-- === CIRCUIT BOARD (bottom) === -->
+  <g transform="translate(400,470) rotate(-8)">
+    <rect x="-150" y="-90" width="300" height="180" rx="6" fill="url(#pcb)" stroke="#2a4a34" stroke-width="1.5"/>
+    <!-- copper traces -->
+    <g stroke="#c2692f" stroke-width="2" fill="none" opacity=".85">
+      <path d="M-130 -60 H-40 V-20 H60 V-60 H130"/>
+      <path d="M-130 40 H-20 V10 H80 V40 H130"/>
+      <path d="M-80 -70 V70"/>
+      <path d="M40 -70 V70"/>
+    </g>
+    <!-- glowing orange pulses along traces -->
+    <g filter="url(#glow)">
+      <circle cx="-90" cy="-60" r="3.5" fill="#FF5A1F"/>
+      <circle cx="0" cy="-20" r="3.5" fill="#FF5A1F"/>
+      <circle cx="100" cy="-60" r="3.5" fill="#FF5A1F"/>
+      <circle cx="-60" cy="10" r="3.5" fill="#FF5A1F"/>
+      <circle cx="60" cy="10" r="3.5" fill="#FF5A1F"/>
+      <circle cx="110" cy="40" r="3.5" fill="#FF5A1F"/>
+    </g>
+    <!-- components -->
+    <g>
+      <rect x="-100" y="-30" width="28" height="20" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+      <rect x="60" y="-30" width="28" height="20" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+      <rect x="-30" y="15" width="60" height="22" rx="2" fill="#0f0f0f" stroke="#ff5a1f" stroke-width="1"/>
+      <circle cx="-110" cy="55" r="9" fill="#2a2a2a" stroke="#888" stroke-width="1"/>
+      <circle cx="110" cy="55" r="9" fill="#2a2a2a" stroke="#888" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- === HEATING ELEMENT (middle) === -->
+  <g transform="translate(400,300) rotate(12)">
+    <path d="M-180 0 Q-90 -40 0 0 Q90 40 180 0" fill="none" stroke="url(#copper)" stroke-width="14" stroke-linecap="round" filter="url(#rim)"/>
+    <path d="M-180 0 Q-90 -40 0 0 Q90 40 180 0" fill="none" stroke="#ff5a1f" stroke-width="2" opacity=".6" filter="url(#glow)"/>
+    <!-- flange -->
+    <rect x="-200" y="-18" width="28" height="36" rx="3" fill="url(#steel)" stroke="#4a5563" stroke-width="1"/>
+    <rect x="172" y="-18" width="28" height="36" rx="3" fill="url(#steel)" stroke="#4a5563" stroke-width="1"/>
+    <!-- bolts -->
+    <g fill="#6b7a8a">
+      <circle cx="-186" cy="-10" r="2.5"/>
+      <circle cx="-186" cy="10" r="2.5"/>
+      <circle cx="186" cy="-10" r="2.5"/>
+      <circle cx="186" cy="10" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- === WASHING MACHINE DRUM (top) === -->
+  <g transform="translate(400,140) rotate(-6)">
+    <!-- drum cylinder body -->
+    <ellipse cx="0" cy="0" rx="150" ry="52" fill="url(#steel)" stroke="#4a5563" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="150" ry="52" fill="none" stroke="#ffffff" stroke-width=".6" opacity=".25"/>
+    <!-- perforations -->
+    <g fill="#0B0D10" opacity=".55">
+      <circle cx="-120" cy="-10" r="3.5"/>
+      <circle cx="-90" cy="-25" r="3.5"/>
+      <circle cx="-60" cy="-8" r="3.5"/>
+      <circle cx="-30" cy="-30" r="3.5"/>
+      <circle cx="0" cy="-12" r="3.5"/>
+      <circle cx="30" cy="-28" r="3.5"/>
+      <circle cx="60" cy="-10" r="3.5"/>
+      <circle cx="90" cy="-26" r="3.5"/>
+      <circle cx="120" cy="-12" r="3.5"/>
+      <circle cx="-105" cy="12" r="3.5"/>
+      <circle cx="-75" cy="28" r="3.5"/>
+      <circle cx="-45" cy="10" r="3.5"/>
+      <circle cx="-15" cy="30" r="3.5"/>
+      <circle cx="15" cy="12" r="3.5"/>
+      <circle cx="45" cy="28" r="3.5"/>
+      <circle cx="75" cy="10" r="3.5"/>
+      <circle cx="105" cy="26" r="3.5"/>
+    </g>
+    <!-- inner ribs/baffles -->
+    <g stroke="#6b7a8a" stroke-width="2" opacity=".6">
+      <line x1="-130" y1="0" x2="-40" y2="0"/>
+      <line x1="40" y1="0" x2="130" y2="0"/>
+    </g>
+    <!-- rim highlight -->
+    <ellipse cx="0" cy="0" rx="150" ry="52" fill="none" stroke="#ffffff" stroke-width="1" opacity=".15"/>
+    <!-- center hub -->
+    <circle cx="0" cy="0" r="18" fill="url(#steel)" stroke="#4a5563" stroke-width="1"/>
+    <circle cx="0" cy="0" r="6" fill="#0B0D10"/>
+  </g>
+
+  <!-- connecting guide lines (exploded view) -->
+  <g stroke="#FF5A1F" stroke-width="1" stroke-dasharray="4 4" opacity=".35">
+    <line x1="400" y1="192" x2="400" y2="248"/>
+    <line x1="400" y1="352" x2="400" y2="380"/>
+  </g>
+
+  <!-- rim light accents -->
+  <g filter="url(#rim)" opacity=".7">
+    <ellipse cx="400" cy="140" rx="155" ry="56" fill="none" stroke="#ffffff" stroke-width=".8"/>
+  </g>
+</svg>
